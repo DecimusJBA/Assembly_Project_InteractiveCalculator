@@ -1,0 +1,23 @@
+Sary Macro BUFF, sizze
+push esi
+	lea esi, BUFF
+	mov ecx, sizze
+	g1:
+		mov al, [esi]
+		call WriteChar
+		inc esi
+		cmp [esi], CR
+	jne g1
+	pop esi
+ENDM
+
+
+
+
+	;lea esi, BUFF						;point to buffer
+	;mPry::esi;; esi
+;	lea edi, Ary1						;point to Ary1.
+;	call FillAry						;fills the array with dword size values from the buffer.
+   ;Sary BUFF, 1024
+	;mPutchar 'A'
+;	mPry BUFF, val 
